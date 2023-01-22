@@ -37,19 +37,11 @@ const newReleases2 = [
   },
 ];
 
-const createArray = (newReleases2) => {
-  return newReleases2
-    .filter((film) => film.rating.includes(5))
-    .map((video) => video.id);
-};
-console.log(createArray(newReleases2));
+const result = newReleases2.reduce((acc, val) => {
+  if (val.rating.includes(5)) {
+    acc.push(val.id);
+  }
+  return acc;
+}, []);
 
-//  РЕШЕНИЯ №2
-// const result = newReleases2.reduce((acc, val) => {
-//   if (val.rating.includes(5)) {
-//     acc.push(val.id);
-//   }
-//   return acc;
-// }, []);
-
-// console.log(result);
+console.log(result);
