@@ -3,6 +3,6 @@
 
 const arrWord = (letters) =>
   letters.map(
-    (letter) => letter[0].toUpperCase() + letter.slice(1).toUpperCase()
+    (letter) => letter[0].toUpperCase() + letter.slice(1).toLowerCase()
   );
 console.log(arrWord(["hello", "wOrLd"]));

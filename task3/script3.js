@@ -20,6 +20,6 @@ const users = [
 ];
 
 const returnUsers = (users, idBlackList) =>
-  users.filter((user) => !idBlackList.includes(user.id));
+  users.filter(({ id }) => !idBlackList.includes(id));
 console.log(returnUsers(users, [2, 3]));
 console.log(returnUsers(users, [3]));
